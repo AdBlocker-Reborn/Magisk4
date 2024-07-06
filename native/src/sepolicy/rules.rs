@@ -101,7 +101,7 @@ impl SepolicyMagisk for sepolicy {
                 [proc], ["unix_stream_socket"], ["connectto", "getopt"]);
 
             // Let everyone access tmpfs files (for SAR sbin overlay)
-            allow(["domain"], ["tmpfs"], ["file"], all);
+            // allow(["domain"], ["tmpfs"], ["file"], all);
 
             // Allow magiskinit daemon to handle mock selinuxfs
             allow(["kernel"], ["tmpfs"], ["fifo_file"], ["write"]);
